@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The Evolution-X Project
+# Copyright (C) 2021 The Arrow-OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Evolution-X stuff
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+# Inherit some common Arrow-OS stuff
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
@@ -28,7 +28,7 @@ $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := evolution_laurel_sprout
+PRODUCT_NAME := arrow_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -37,10 +37,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 SKIP_ABI_CHECKS := true
 
 # Props
-EVO_BUILD_TYPE := OFFICIAL
+ARROW_BUILD_TYPE := UNOFFICIAL
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_MINI_GAPPS := true
-EVO_SIGNED := true

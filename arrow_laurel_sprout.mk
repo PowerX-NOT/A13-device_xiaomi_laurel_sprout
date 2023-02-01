@@ -25,6 +25,8 @@ $(call inherit-product, vendor/arrow/config/common.mk)
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
 
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
@@ -37,9 +39,15 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 SKIP_ABI_CHECKS := true
 
 # Props
+ARROW_GAPPS := true
+WITH_GMS := true
 ARROW_BUILD_TYPE := UNOFFICIAL
+DEVICE_MAINTAINER := PowerX-NOT, Noctowl709
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_MINI_GAPPS := true
+
+
+DEVICE_MAINTAINER := Rahul(Noctowl709) & PowerX_NOT
